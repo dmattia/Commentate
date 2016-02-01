@@ -10,9 +10,13 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
-    @IBOutlet weak var myEventsTableView: UITableView!
     @IBOutlet weak var purpleBackground: UIView!
     @IBOutlet weak var blueBackground: UIView!
+    @IBOutlet weak var myEventCount: UILabel!
+    @IBOutlet weak var myListenerCount: UILabel!
+    @IBOutlet weak var listenedToCount: UILabel!
+    @IBOutlet weak var timeListenedCount: UILabel!
+    @IBOutlet weak var usernameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()

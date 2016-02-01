@@ -7,9 +7,46 @@
 //
 
 import UIKit
+import Parse
+import ParseUI
 
-class MenuViewController: UIViewController {
+class MenuViewController: UIViewController, PFLogInViewControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    func displayLogin() {
+        let loginViewController = ParseLogInViewController()
+        loginViewController.delegate = self
+        
+        loginViewController.fields = [
+            PFLogInFields.UsernameAndPassword,
+            PFLogInFields.LogInButton,
+            PFLogInFields.SignUpButton,
+            PFLogInFields.PasswordForgotten,
+        ]
+        
+        self.presentViewController(loginViewController, animated: true, completion: nil)
+    }
+    
+    
+    func logInViewController(logInController: PFLogInViewController, didLogInUser user: PFUser) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func logoutClicked(sender: AnyObject) {
+        PFUser.logOut()
+        self.displayLogin()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        dispatch_async(dispatch_get_main_queue(), {
+            if(PFUser.currentUser() == nil) {
+                self.displayLogin()
+            } else {
+                
+            }
+        })
+    }
+    
 }

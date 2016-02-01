@@ -125,7 +125,13 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="thZ-1N-r0T"/>
+                    <navigationItem key="navigationItem" title="Home" id="thZ-1N-r0T">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="1ec-ze-83c">
+                            <connections>
+                                <action selector="logoutClicked:" destination="BYZ-38-t0r" id="HDn-c9-ceX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -148,7 +154,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AllEventsCell" rowHeight="90" id="vW1-L2-rQf">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AllEventsCell" rowHeight="90" id="vW1-L2-rQf" customClass="AllEventsTableViewCell" customModule="Commentate" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="375" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vW1-L2-rQf" id="qsb-Wv-6AS">
@@ -191,6 +197,12 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="commentatorLabel" destination="ycz-CC-x5s" id="dgk-Cs-oNk"/>
+                                            <outlet property="eventTitleLabel" destination="kUh-ng-H0H" id="fJf-S5-oWx"/>
+                                            <outlet property="styleLabel" destination="exR-ZZ-TXU" id="230-mZ-Nph"/>
+                                            <outlet property="viewersLabel" destination="Rlw-Sz-g74" id="mlE-eD-jub"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -198,6 +210,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="myEventsTableView" destination="sBA-DS-KX6" id="hjM-Ec-A6K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cEo-iF-BLf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -278,7 +293,12 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="blueBackground" destination="PId-Q3-7hk" id="lG5-3W-ias"/>
+                        <outlet property="listenedToCount" destination="mRc-4D-PNd" id="dCi-kq-RR8"/>
+                        <outlet property="myEventCount" destination="aom-lF-T7J" id="b19-3L-dIz"/>
+                        <outlet property="myListenerCount" destination="UTm-9C-LCq" id="h3X-9W-vst"/>
                         <outlet property="purpleBackground" destination="WfB-Uk-ueJ" id="o5q-Bh-rNF"/>
+                        <outlet property="timeListenedCount" destination="1GP-VS-UA8" id="CHq-7D-hQm"/>
+                        <outlet property="usernameLabel" destination="eFB-gf-cHn" id="UZP-hz-xgb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fIu-mh-Itk" userLabel="First Responder" sceneMemberID="firstResponder"/>
