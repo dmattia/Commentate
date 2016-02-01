@@ -426,11 +426,24 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IZl-ec-MRT">
+                                <rect key="frame" x="0.0" y="437" width="375" height="93"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0 Listeners" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CiI-Cs-XhJ">
+                                        <rect key="frame" x="8" y="23" width="359" height="45"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.53315409800000002" green="0.78576691040000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.95133463539999996" green="0.69220429689999996" blue="0.14612150839999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="listenersLabel" destination="CiI-Cs-XhJ" id="d0F-Cy-hML"/>
                         <outlet property="nameLabel" destination="tis-SK-V01" id="0Me-cV-ct7"/>
                     </connections>
                 </viewController>
@@ -506,6 +519,10 @@
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="passwordTextField" destination="arH-fX-6Ue" id="Rc4-1N-VBo"/>
+                        <outlet property="usernameTextField" destination="EZp-sj-5uK" id="VCq-Ye-OU9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6T9-Pr-3GF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -570,6 +587,10 @@
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="passwordTextField" destination="Ot2-FE-6pv" id="5x6-hM-uwO"/>
+                        <outlet property="usernameTextField" destination="9wj-zP-HRQ" id="8TK-2e-dlb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6wu-ly-m0x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -96,6 +96,7 @@ class AllEventsViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellIdentifier = "AllEventsCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as! AllEventsTableViewCell
+        cell.selectionStyle = .None
         
         var event : PFObject
         if(indexPath.section == 0) {

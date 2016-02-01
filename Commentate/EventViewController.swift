@@ -13,6 +13,7 @@ import AVFoundation
 class EventViewController: UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var listenersLabel: UILabel!
     var event : PFObject?
     var backgroundMusic : AVAudioPlayer?
     
@@ -22,6 +23,8 @@ class EventViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         self.nameLabel.text = self.event?["title"] as? String
+        let randomViewerCount = random() % 2000
+        self.listenersLabel.text = "\(randomViewerCount) Listeners"
         
         if let backgroundMusic = self.setupAudioPlayerWithFile("love story", type:"mp3") {
             self.backgroundMusic = backgroundMusic

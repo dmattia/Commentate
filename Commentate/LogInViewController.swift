@@ -10,12 +10,17 @@ import UIKit
 import Parse
 
 class LogInViewController: UIViewController {
+    
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     @IBAction func loginPressed(sender: AnyObject) {
-        PFUser.logInWithUsernameInBackground("test", password:"test") {
+        PFUser.logInWithUsernameInBackground(self.usernameTextField.text!,
+            password:self.passwordTextField.text!) {
             (user: PFUser?, error: NSError?) -> Void in
             if user != nil {
                 self.dismissViewControllerAnimated(true, completion: nil)
