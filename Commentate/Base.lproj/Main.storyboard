@@ -99,46 +99,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ALe-CA-jSi">
-                                <rect key="frame" x="18" y="373" width="126" height="30"/>
-                                <state key="normal" title="Go To Your Events">
-                                    <color key="titleColor" red="0.65098039215686276" green="0.88627450980392153" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Pav-A5-9Wm" kind="show" id="D4s-I8-XMk"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w6k-kY-8gw">
-                                <rect key="frame" x="213" y="373" width="153" height="30"/>
-                                <state key="normal" title="Schedule a New Event">
-                                    <color key="titleColor" red="0.65098039220000004" green="0.8862745098" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="iI4-k4-viY" kind="show" id="D33-I8-ini"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0C-EE-Stf">
-                                <rect key="frame" x="102" y="471" width="170" height="30"/>
-                                <state key="normal" title="Listen to a Commentator">
-                                    <color key="titleColor" red="0.97647058823529409" green="0.14901960784313725" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Ccd-iX-aFD" kind="show" id="WGQ-85-BLi"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zsJ-t5-Tpf">
-                                <rect key="frame" x="148" y="560" width="79" height="30"/>
-                                <state key="normal" title="Your Profile">
-                                    <color key="titleColor" red="0.40000000000000002" green="0.85098039215686272" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="7lh-J6-KvL" kind="show" id="mUt-4o-BjD"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="home" translatesAutoresizingMaskIntoConstraints="NO" id="Vbf-rb-Nwg">
-                                <rect key="frame" x="109" y="134" width="157" height="157"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hkk-sr-tOO">
+                                <rect key="frame" x="0.0" y="64" width="375" height="150"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w6k-kY-8gw">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                                        <state key="normal" title="Schedule a New Event">
+                                            <color key="titleColor" red="0.1529411765" green="0.15686274510000001" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="iI4-k4-viY" kind="show" id="D33-I8-ini"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.59215686270000001" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E8J-o5-jfy">
+                                <rect key="frame" x="0.0" y="217" width="375" height="150"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0C-EE-Stf">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                                        <state key="normal" title="Listen to a Commentator">
+                                            <color key="titleColor" red="0.1529411765" green="0.15686274510000001" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Ccd-iX-aFD" kind="show" id="WGQ-85-BLi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.40000000000000002" green="0.85098039219999999" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N8S-gv-Kl1">
+                                <rect key="frame" x="0.0" y="523" width="375" height="150"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ALe-CA-jSi">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                                        <state key="normal" title="Go To Your Events">
+                                            <color key="titleColor" red="0.1529411765" green="0.15686274510000001" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Pav-A5-9Wm" kind="show" id="D4s-I8-XMk"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.14901960780000001" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iIH-9Q-Ew9">
+                                <rect key="frame" x="0.0" y="370" width="375" height="150"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zsJ-t5-Tpf">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                                        <state key="normal" title="Your Profile">
+                                            <color key="titleColor" red="0.1529411765" green="0.15686274510000001" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="7lh-J6-KvL" kind="show" id="mUt-4o-BjD"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.65098039220000004" green="0.8862745098" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.15294117647058825" green="0.15686274509803921" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -621,7 +641,6 @@
     <resources>
         <image name="Commentate" width="532" height="150"/>
         <image name="default" width="512" height="512"/>
-        <image name="home" width="256" height="256"/>
         <image name="waves" width="356" height="142"/>
     </resources>
 </document>
