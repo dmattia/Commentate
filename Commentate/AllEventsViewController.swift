@@ -80,10 +80,22 @@ class AllEventsViewController: UIViewController, UITableViewDelegate, UITableVie
         return 0
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let destinationViewController = storyboard.instantiateViewControllerWithIdentifier("EventViewController") as! EventViewController
+        
+        if(indexPath.section == 0) {
+            destinationViewController.event = liveEvents![indexPath.row]
+        } else {
+            destinationViewController.event = futureEvents![indexPath.row]
+        }
+        
+        self.presentViewController(destinationViewController, animated: true, completion: nil)
+    }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellIdentifier = "AllEventsCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as! AllEventsTableViewCell
-        cell.selectionStyle = .None
         
         var event : PFObject
         if(indexPath.section == 0) {
@@ -92,7 +104,6 @@ class AllEventsViewController: UIViewController, UITableViewDelegate, UITableVie
             event = self.futureEvents![indexPath.row]
         }
         cell.eventTitleLabel.text = event["title"] as? String
-        //cell.commentatorLabel.text = event["]
         cell.styleLabel.text = event["style"] as? String
         let randViewers = random() % 2000
         cell.viewersLabel.text = "\(randViewers)"

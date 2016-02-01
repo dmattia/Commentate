@@ -34,6 +34,9 @@
 		F1237A6F1C5EF54D001DA5B3 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F1237A6E1C5EF54D001DA5B3 /* libsqlite3.tbd */; };
 		F1237A751C5F14A0001DA5B3 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1237A741C5F14A0001DA5B3 /* LogInViewController.swift */; };
 		F1237A791C5F14F6001DA5B3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1237A781C5F14F6001DA5B3 /* SignUpViewController.swift */; };
+		F1237A7B1C5F2BB9001DA5B3 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1237A7A1C5F2BB9001DA5B3 /* EventViewController.swift */; };
+		F1237A7D1C5F2E7E001DA5B3 /* love story.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1237A7C1C5F2E7E001DA5B3 /* love story.mp3 */; };
+		F1237A7F1C5F2EAC001DA5B3 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1237A7E1C5F2EAC001DA5B3 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +90,9 @@
 		F1237A6E1C5EF54D001DA5B3 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		F1237A741C5F14A0001DA5B3 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		F1237A781C5F14F6001DA5B3 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = ../SignUpViewController.swift; sourceTree = "<group>"; };
+		F1237A7A1C5F2BB9001DA5B3 /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		F1237A7C1C5F2E7E001DA5B3 /* love story.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "love story.mp3"; sourceTree = "<group>"; };
+		F1237A7E1C5F2EAC001DA5B3 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1237A7F1C5F2EAC001DA5B3 /* AVFoundation.framework in Frameworks */,
 				F1237A6F1C5EF54D001DA5B3 /* libsqlite3.tbd in Frameworks */,
 				F1237A6D1C5EF544001DA5B3 /* libz.tbd in Frameworks */,
 				F1237A6B1C5EF53C001DA5B3 /* SystemConfiguration.framework in Frameworks */,
@@ -130,6 +137,7 @@
 		F1237A0F1C5EDEC9001DA5B3 = {
 			isa = PBXGroup;
 			children = (
+				F1237A7E1C5F2EAC001DA5B3 /* AVFoundation.framework */,
 				F1237A6E1C5EF54D001DA5B3 /* libsqlite3.tbd */,
 				F1237A6C1C5EF544001DA5B3 /* libz.tbd */,
 				F1237A6A1C5EF53C001DA5B3 /* SystemConfiguration.framework */,
@@ -163,6 +171,7 @@
 		F1237A1A1C5EDEC9001DA5B3 /* Commentate */ = {
 			isa = PBXGroup;
 			children = (
+				F1237A801C5F2EC2001DA5B3 /* MP3s */,
 				F1237A1B1C5EDEC9001DA5B3 /* AppDelegate.swift */,
 				F1237A1F1C5EDEC9001DA5B3 /* Main.storyboard */,
 				F1237A551C5EE741001DA5B3 /* ViewControllers */,
@@ -195,6 +204,7 @@
 		F1237A551C5EE741001DA5B3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				F1237A7A1C5F2BB9001DA5B3 /* EventViewController.swift */,
 				F1237A491C5EDEED001DA5B3 /* MenuViewController.swift */,
 				F1237A741C5F14A0001DA5B3 /* LogInViewController.swift */,
 				F1237A781C5F14F6001DA5B3 /* SignUpViewController.swift */,
@@ -204,6 +214,14 @@
 				F1237A4B1C5EE303001DA5B3 /* CreateEventViewController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F1237A801C5F2EC2001DA5B3 /* MP3s */ = {
+			isa = PBXGroup;
+			children = (
+				F1237A7C1C5F2E7E001DA5B3 /* love story.mp3 */,
+			);
+			name = MP3s;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,6 +331,7 @@
 				F1237A261C5EDEC9001DA5B3 /* LaunchScreen.storyboard in Resources */,
 				F1237A231C5EDEC9001DA5B3 /* Assets.xcassets in Resources */,
 				F1237A211C5EDEC9001DA5B3 /* Main.storyboard in Resources */,
+				F1237A7D1C5F2E7E001DA5B3 /* love story.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +361,7 @@
 				F1237A4E1C5EE5A7001DA5B3 /* MyEventsViewController.swift in Sources */,
 				F1237A541C5EE72B001DA5B3 /* AllEventsTableViewCell.swift in Sources */,
 				F1237A501C5EE661001DA5B3 /* ProfileViewController.swift in Sources */,
+				F1237A7B1C5F2BB9001DA5B3 /* EventViewController.swift in Sources */,
 				F1237A521C5EE66F001DA5B3 /* AllEventsViewController.swift in Sources */,
 				F1237A4A1C5EDEED001DA5B3 /* MenuViewController.swift in Sources */,
 				F1237A751C5F14A0001DA5B3 /* LogInViewController.swift in Sources */,
