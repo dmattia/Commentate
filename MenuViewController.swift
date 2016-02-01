@@ -16,19 +16,10 @@ class MenuViewController: UIViewController, PFLogInViewControllerDelegate {
     }
     
     func displayLogin() {
-        let loginViewController = ParseLogInViewController()
-        loginViewController.delegate = self
-        
-        loginViewController.fields = [
-            PFLogInFields.UsernameAndPassword,
-            PFLogInFields.LogInButton,
-            PFLogInFields.SignUpButton,
-            PFLogInFields.PasswordForgotten,
-        ]
-        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let loginViewController = storyboard.instantiateViewControllerWithIdentifier("LogInController")
         self.presentViewController(loginViewController, animated: true, completion: nil)
     }
-    
     
     func logInViewController(logInController: PFLogInViewController, didLogInUser user: PFUser) {
         self.dismissViewControllerAnimated(true, completion: nil)

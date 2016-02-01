@@ -32,8 +32,8 @@
 		F1237A6B1C5EF53C001DA5B3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1237A6A1C5EF53C001DA5B3 /* SystemConfiguration.framework */; };
 		F1237A6D1C5EF544001DA5B3 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F1237A6C1C5EF544001DA5B3 /* libz.tbd */; };
 		F1237A6F1C5EF54D001DA5B3 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F1237A6E1C5EF54D001DA5B3 /* libsqlite3.tbd */; };
-		F1237A711C5EF6A6001DA5B3 /* ParseLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1237A701C5EF6A6001DA5B3 /* ParseLogInViewController.swift */; };
-		F1237A731C5EF75B001DA5B3 /* ParseSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1237A721C5EF75B001DA5B3 /* ParseSignUpViewController.swift */; };
+		F1237A751C5F14A0001DA5B3 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1237A741C5F14A0001DA5B3 /* LogInViewController.swift */; };
+		F1237A791C5F14F6001DA5B3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1237A781C5F14F6001DA5B3 /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,8 +85,8 @@
 		F1237A6A1C5EF53C001DA5B3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		F1237A6C1C5EF544001DA5B3 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		F1237A6E1C5EF54D001DA5B3 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		F1237A701C5EF6A6001DA5B3 /* ParseLogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseLogInViewController.swift; sourceTree = "<group>"; };
-		F1237A721C5EF75B001DA5B3 /* ParseSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseSignUpViewController.swift; sourceTree = "<group>"; };
+		F1237A741C5F14A0001DA5B3 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		F1237A781C5F14F6001DA5B3 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = ../SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,8 +196,8 @@
 			isa = PBXGroup;
 			children = (
 				F1237A491C5EDEED001DA5B3 /* MenuViewController.swift */,
-				F1237A701C5EF6A6001DA5B3 /* ParseLogInViewController.swift */,
-				F1237A721C5EF75B001DA5B3 /* ParseSignUpViewController.swift */,
+				F1237A741C5F14A0001DA5B3 /* LogInViewController.swift */,
+				F1237A781C5F14F6001DA5B3 /* SignUpViewController.swift */,
 				F1237A511C5EE66F001DA5B3 /* AllEventsViewController.swift */,
 				F1237A4F1C5EE661001DA5B3 /* ProfileViewController.swift */,
 				F1237A4D1C5EE5A7001DA5B3 /* MyEventsViewController.swift */,
@@ -337,14 +337,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1237A731C5EF75B001DA5B3 /* ParseSignUpViewController.swift in Sources */,
+				F1237A791C5F14F6001DA5B3 /* SignUpViewController.swift in Sources */,
 				F1237A1C1C5EDEC9001DA5B3 /* AppDelegate.swift in Sources */,
 				F1237A4E1C5EE5A7001DA5B3 /* MyEventsViewController.swift in Sources */,
 				F1237A541C5EE72B001DA5B3 /* AllEventsTableViewCell.swift in Sources */,
 				F1237A501C5EE661001DA5B3 /* ProfileViewController.swift in Sources */,
-				F1237A711C5EF6A6001DA5B3 /* ParseLogInViewController.swift in Sources */,
 				F1237A521C5EE66F001DA5B3 /* AllEventsViewController.swift in Sources */,
 				F1237A4A1C5EDEED001DA5B3 /* MenuViewController.swift in Sources */,
+				F1237A751C5F14A0001DA5B3 /* LogInViewController.swift in Sources */,
 				F1237A4C1C5EE303001DA5B3 /* CreateEventViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
