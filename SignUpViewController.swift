@@ -29,13 +29,18 @@ class SignUpViewController: UIViewController {
             (succeeded: Bool, error: NSError?) -> Void in
             if let error = error {
                 let errorString = error.userInfo["error"] as? NSString
-                // Show the errorString somewhere and let the user try again.
-                print("Couldn't log it: \(errorString)")
+                
+                let alert = UIAlertController(title: "Error Signing up", message: "\(errorString!)", preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
             } else {
                 // Hooray! Let them use the app now.
                 self.dismissViewControllerAnimated(true, completion: nil)
             }
         }
-        
+    }
+    
+    @IBAction func cancelPressed(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 }

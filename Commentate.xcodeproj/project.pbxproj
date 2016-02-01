@@ -95,6 +95,7 @@
 		F1237A7C1C5F2E7E001DA5B3 /* love story.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "love story.mp3"; sourceTree = "<group>"; };
 		F1237A7E1C5F2EAC001DA5B3 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		F1237A811C5F3B8C001DA5B3 /* MyEventsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyEventsTableViewCell.swift; sourceTree = "<group>"; };
+		F1D6EE8B1C5FC35A00493B10 /* Consolas.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Consolas.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +176,7 @@
 			children = (
 				F1237A801C5F2EC2001DA5B3 /* MP3s */,
 				F1237A1B1C5EDEC9001DA5B3 /* AppDelegate.swift */,
+				F1D6EE8C1C5FC37200493B10 /* Fonts */,
 				F1237A1F1C5EDEC9001DA5B3 /* Main.storyboard */,
 				F1237A551C5EE741001DA5B3 /* ViewControllers */,
 				F1237A531C5EE72B001DA5B3 /* AllEventsTableViewCell.swift */,
@@ -225,6 +227,14 @@
 				F1237A7C1C5F2E7E001DA5B3 /* love story.mp3 */,
 			);
 			name = MP3s;
+			sourceTree = "<group>";
+		};
+		F1D6EE8C1C5FC37200493B10 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F1D6EE8B1C5FC35A00493B10 /* Consolas.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -602,6 +612,7 @@
 				F1237A421C5EDEC9001DA5B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F1237A431C5EDEC9001DA5B3 /* Build configuration list for PBXNativeTarget "CommentateTests" */ = {
 			isa = XCConfigurationList;
@@ -610,6 +621,7 @@
 				F1237A451C5EDEC9001DA5B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F1237A461C5EDEC9001DA5B3 /* Build configuration list for PBXNativeTarget "CommentateUITests" */ = {
 			isa = XCConfigurationList;
@@ -618,6 +630,7 @@
 				F1237A481C5EDEC9001DA5B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
