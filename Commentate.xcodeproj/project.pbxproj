@@ -14,6 +14,11 @@
 		F1237A311C5EDEC9001DA5B3 /* CommentateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1237A301C5EDEC9001DA5B3 /* CommentateTests.swift */; };
 		F1237A3C1C5EDEC9001DA5B3 /* CommentateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1237A3B1C5EDEC9001DA5B3 /* CommentateUITests.swift */; };
 		F1237A4A1C5EDEED001DA5B3 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1237A491C5EDEED001DA5B3 /* MenuViewController.swift */; };
+		F1237A4C1C5EE303001DA5B3 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1237A4B1C5EE303001DA5B3 /* CreateEventViewController.swift */; };
+		F1237A4E1C5EE5A7001DA5B3 /* MyEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1237A4D1C5EE5A7001DA5B3 /* MyEventsViewController.swift */; };
+		F1237A501C5EE661001DA5B3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1237A4F1C5EE661001DA5B3 /* ProfileViewController.swift */; };
+		F1237A521C5EE66F001DA5B3 /* AllEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1237A511C5EE66F001DA5B3 /* AllEventsViewController.swift */; };
+		F1237A541C5EE72B001DA5B3 /* AllEventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1237A531C5EE72B001DA5B3 /* AllEventsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,11 @@
 		F1237A3B1C5EDEC9001DA5B3 /* CommentateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentateUITests.swift; sourceTree = "<group>"; };
 		F1237A3D1C5EDEC9001DA5B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1237A491C5EDEED001DA5B3 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = ../MenuViewController.swift; sourceTree = "<group>"; };
+		F1237A4B1C5EE303001DA5B3 /* CreateEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
+		F1237A4D1C5EE5A7001DA5B3 /* MyEventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyEventsViewController.swift; sourceTree = "<group>"; };
+		F1237A4F1C5EE661001DA5B3 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F1237A511C5EE66F001DA5B3 /* AllEventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllEventsViewController.swift; sourceTree = "<group>"; };
+		F1237A531C5EE72B001DA5B3 /* AllEventsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllEventsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +107,10 @@
 		F1237A1A1C5EDEC9001DA5B3 /* Commentate */ = {
 			isa = PBXGroup;
 			children = (
-				F1237A491C5EDEED001DA5B3 /* MenuViewController.swift */,
 				F1237A1B1C5EDEC9001DA5B3 /* AppDelegate.swift */,
 				F1237A1F1C5EDEC9001DA5B3 /* Main.storyboard */,
+				F1237A551C5EE741001DA5B3 /* ViewControllers */,
+				F1237A531C5EE72B001DA5B3 /* AllEventsTableViewCell.swift */,
 				F1237A221C5EDEC9001DA5B3 /* Assets.xcassets */,
 				F1237A241C5EDEC9001DA5B3 /* LaunchScreen.storyboard */,
 				F1237A271C5EDEC9001DA5B3 /* Info.plist */,
@@ -123,6 +134,18 @@
 				F1237A3D1C5EDEC9001DA5B3 /* Info.plist */,
 			);
 			path = CommentateUITests;
+			sourceTree = "<group>";
+		};
+		F1237A551C5EE741001DA5B3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F1237A491C5EDEED001DA5B3 /* MenuViewController.swift */,
+				F1237A511C5EE66F001DA5B3 /* AllEventsViewController.swift */,
+				F1237A4F1C5EE661001DA5B3 /* ProfileViewController.swift */,
+				F1237A4D1C5EE5A7001DA5B3 /* MyEventsViewController.swift */,
+				F1237A4B1C5EE303001DA5B3 /* CreateEventViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +280,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1237A1C1C5EDEC9001DA5B3 /* AppDelegate.swift in Sources */,
+				F1237A4E1C5EE5A7001DA5B3 /* MyEventsViewController.swift in Sources */,
+				F1237A541C5EE72B001DA5B3 /* AllEventsTableViewCell.swift in Sources */,
+				F1237A501C5EE661001DA5B3 /* ProfileViewController.swift in Sources */,
+				F1237A521C5EE66F001DA5B3 /* AllEventsViewController.swift in Sources */,
 				F1237A4A1C5EDEED001DA5B3 /* MenuViewController.swift in Sources */,
+				F1237A4C1C5EE303001DA5B3 /* CreateEventViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
