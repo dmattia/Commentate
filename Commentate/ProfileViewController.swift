@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class ProfileViewController: UIViewController {
     
@@ -26,5 +27,20 @@ class ProfileViewController: UIViewController {
         self.blueBackground.layer.cornerRadius = 25
         self.purpleBackground.layer.masksToBounds = true
         self.blueBackground.layer.masksToBounds = true
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        let listenedTo = PFUser.currentUser()!["eventsViewed"]
+        self.listenedToCount.text = "Listened To: \(listenedTo)"
+        
+        let query = PFQuery(className: "Event")
+        query.whereKey("speaker", equalTo: PFUser.currentUser()!.objectId!)
+        query.countObjectsInBackgroundWithBlock { (count: Int32, error: NSError?) -> Void in
+            if(error == nil) {
+                self.myEventCount.text = "Total Events: \(count)"
+                let listenerCount = (random() % 2000) * Int(count)
+                self.myListenerCount.text = "Total Listeners: \(listenerCount)"
+            }
+        }
     }
 }

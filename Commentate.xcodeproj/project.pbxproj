@@ -37,6 +37,7 @@
 		F1237A7B1C5F2BB9001DA5B3 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1237A7A1C5F2BB9001DA5B3 /* EventViewController.swift */; };
 		F1237A7D1C5F2E7E001DA5B3 /* love story.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1237A7C1C5F2E7E001DA5B3 /* love story.mp3 */; };
 		F1237A7F1C5F2EAC001DA5B3 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1237A7E1C5F2EAC001DA5B3 /* AVFoundation.framework */; };
+		F1237A821C5F3B8C001DA5B3 /* MyEventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1237A811C5F3B8C001DA5B3 /* MyEventsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		F1237A7A1C5F2BB9001DA5B3 /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		F1237A7C1C5F2E7E001DA5B3 /* love story.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "love story.mp3"; sourceTree = "<group>"; };
 		F1237A7E1C5F2EAC001DA5B3 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F1237A811C5F3B8C001DA5B3 /* MyEventsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyEventsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 				F1237A1F1C5EDEC9001DA5B3 /* Main.storyboard */,
 				F1237A551C5EE741001DA5B3 /* ViewControllers */,
 				F1237A531C5EE72B001DA5B3 /* AllEventsTableViewCell.swift */,
+				F1237A811C5F3B8C001DA5B3 /* MyEventsTableViewCell.swift */,
 				F1237A221C5EDEC9001DA5B3 /* Assets.xcassets */,
 				F1237A241C5EDEC9001DA5B3 /* LaunchScreen.storyboard */,
 				F1237A271C5EDEC9001DA5B3 /* Info.plist */,
@@ -209,8 +212,8 @@
 				F1237A741C5F14A0001DA5B3 /* LogInViewController.swift */,
 				F1237A781C5F14F6001DA5B3 /* SignUpViewController.swift */,
 				F1237A511C5EE66F001DA5B3 /* AllEventsViewController.swift */,
-				F1237A4F1C5EE661001DA5B3 /* ProfileViewController.swift */,
 				F1237A4D1C5EE5A7001DA5B3 /* MyEventsViewController.swift */,
+				F1237A4F1C5EE661001DA5B3 /* ProfileViewController.swift */,
 				F1237A4B1C5EE303001DA5B3 /* CreateEventViewController.swift */,
 			);
 			name = ViewControllers;
@@ -360,6 +363,7 @@
 				F1237A1C1C5EDEC9001DA5B3 /* AppDelegate.swift in Sources */,
 				F1237A4E1C5EE5A7001DA5B3 /* MyEventsViewController.swift in Sources */,
 				F1237A541C5EE72B001DA5B3 /* AllEventsTableViewCell.swift in Sources */,
+				F1237A821C5F3B8C001DA5B3 /* MyEventsTableViewCell.swift in Sources */,
 				F1237A501C5EE661001DA5B3 /* ProfileViewController.swift in Sources */,
 				F1237A7B1C5F2BB9001DA5B3 /* EventViewController.swift in Sources */,
 				F1237A521C5EE66F001DA5B3 /* AllEventsViewController.swift in Sources */,

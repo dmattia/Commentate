@@ -19,6 +19,11 @@ class EventViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // add one to the number of events the current user has viewed
+        let currentCount = PFUser.currentUser()!["eventsViewed"] as! NSNumber
+        PFUser.currentUser()!["eventsViewed"] = currentCount.integerValue + 1
+        PFUser.currentUser()!.saveInBackground()
     }
     
     override func viewDidAppear(animated: Bool) {

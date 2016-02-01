@@ -23,6 +23,8 @@ class SignUpViewController: UIViewController {
         user.username = self.usernameTextField.text!
         user.password = self.passwordTextField.text!
         
+        user["eventsViewed"] = 0
+        
         user.signUpInBackgroundWithBlock {
             (succeeded: Bool, error: NSError?) -> Void in
             if let error = error {
