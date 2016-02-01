@@ -30,6 +30,7 @@ class ProfileViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
+        self.usernameLabel.text = PFUser.currentUser()!.username
         let listenedTo = PFUser.currentUser()!["eventsViewed"]
         self.listenedToCount.text = "Listened To: \(listenedTo)"
         
