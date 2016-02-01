@@ -17,6 +17,9 @@ class MyEventsViewController: UIViewController, UITableViewDataSource, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "My Events"
+        let myColor = UIColor(colorLiteralRed: 39.0/255.0, green: 40.0/255.0, blue: 34.0/255.0, alpha: 1.0)
+        self.myEventsTableView.backgroundColor = myColor
+        self.myEventsTableView.backgroundView?.backgroundColor = myColor
         
         self.myEventsTableView.delegate = self
         self.myEventsTableView.dataSource = self
