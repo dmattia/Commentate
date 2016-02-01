@@ -12,7 +12,9 @@ import Parse
 class AllEventsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var myEventsTableView: UITableView!
-    var events : [PFObject]?
+    var liveEvents : [PFObject]?
+    var futureEvents : [PFObject]?
+    var refreshControl:UIRefreshControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,10 +23,32 @@ class AllEventsViewController: UIViewController, UITableViewDelegate, UITableVie
         self.myEventsTableView.dataSource = self
         self.myEventsTableView.delegate = self
         
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        self.refreshControl.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
+        self.myEventsTableView.addSubview(refreshControl)
+        
+        self.refresh(self)
+    }
+    
+    func refresh(sender:AnyObject)
+    {
         let query = PFQuery(className: "Event")
+        query.whereKey("startTime", lessThan: NSDate())
+        // would order by viewers if it were actually in the database
+        // right now, viewers is a random number decided at runtime
         query.findObjectsInBackgroundWithBlock { (events: [PFObject]?, error: NSError?) -> Void in
-            self.events = events
+            self.liveEvents = events
             self.myEventsTableView.reloadData()
+            self.refreshControl.endRefreshing()
+        }
+        let futureQuery = PFQuery(className: "Event")
+        futureQuery.whereKey("startTime", greaterThan: NSDate())
+        futureQuery.orderByAscending("startTime")
+        futureQuery.findObjectsInBackgroundWithBlock { (events: [PFObject]?, error: NSError?) -> Void in
+            self.futureEvents = events
+            self.myEventsTableView.reloadData()
+            self.refreshControl.endRefreshing()
         }
     }
     
@@ -32,25 +56,46 @@ class AllEventsViewController: UIViewController, UITableViewDelegate, UITableVie
         return 90
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let count = self.events?.count {
-            return count
-        } else {
-            return 0
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 2
+    }
+    
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if(section == 0) {
+            return "Live!"
         }
+        return "Future Events"
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if(section == 0) {
+            if let count = self.liveEvents?.count {
+                return count
+            }
+        } else {
+            if let count = self.futureEvents?.count {
+                return count
+            }
+        }
+        return 0
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellIdentifier = "AllEventsCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as! AllEventsTableViewCell
+        cell.selectionStyle = .None
         
-        let event = self.events![indexPath.row]
+        var event : PFObject
+        if(indexPath.section == 0) {
+            event = self.liveEvents![indexPath.row]
+        } else {
+            event = self.futureEvents![indexPath.row]
+        }
         cell.eventTitleLabel.text = event["title"] as? String
         //cell.commentatorLabel.text = event["]
         cell.styleLabel.text = event["style"] as? String
         let randViewers = random() % 2000
         cell.viewersLabel.text = "\(randViewers)"
-        
         
         // find the commentator Label
         let userId = event["speaker"] as? String
