@@ -21,12 +21,6 @@
             <string>Consolas</string>
             <string>Consolas</string>
             <string>Consolas</string>
-            <string>Consolas</string>
-            <string>Consolas</string>
-            <string>Consolas</string>
-            <string>Consolas</string>
-            <string>Consolas</string>
-            <string>Consolas</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -105,89 +99,6 @@
             </objects>
             <point key="canvasLocation" x="3237.5" y="255.5"/>
         </scene>
-        <!--Menu View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="MenuViewController" customModule="Commentate" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hkk-sr-tOO">
-                                <rect key="frame" x="0.0" y="64" width="375" height="150"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w6k-kY-8gw">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
-                                        <fontDescription key="fontDescription" name="Consolas" family="Consolas" pointSize="15"/>
-                                        <state key="normal" title="Schedule a New Event">
-                                            <color key="titleColor" red="0.1529411765" green="0.15686274510000001" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.99215686270000003" green="0.59215686270000001" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E8J-o5-jfy">
-                                <rect key="frame" x="0.0" y="217" width="375" height="150"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0C-EE-Stf">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
-                                        <fontDescription key="fontDescription" name="Consolas" family="Consolas" pointSize="15"/>
-                                        <state key="normal" title="Listen to a Commentator">
-                                            <color key="titleColor" red="0.1529411765" green="0.15686274510000001" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.40000000000000002" green="0.85098039219999999" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N8S-gv-Kl1">
-                                <rect key="frame" x="0.0" y="523" width="375" height="150"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ALe-CA-jSi">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
-                                        <fontDescription key="fontDescription" name="Consolas" family="Consolas" pointSize="15"/>
-                                        <state key="normal" title="Go To Your Events">
-                                            <color key="titleColor" red="0.1529411765" green="0.15686274510000001" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.97647058819999999" green="0.14901960780000001" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iIH-9Q-Ew9">
-                                <rect key="frame" x="0.0" y="370" width="375" height="150"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zsJ-t5-Tpf">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
-                                        <fontDescription key="fontDescription" name="Consolas" family="Consolas" pointSize="15"/>
-                                        <state key="normal" title="Your Profile">
-                                            <color key="titleColor" red="0.1529411765" green="0.15686274510000001" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.65098039220000004" green="0.8862745098" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" red="0.15294117647058825" green="0.15686274509803921" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="thZ-1N-r0T">
-                        <barButtonItem key="leftBarButtonItem" title="Logout" id="1ec-ze-83c">
-                            <color key="tintColor" red="0.65098039220000004" green="0.8862745098" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="logoutClicked:" destination="BYZ-38-t0r" id="HDn-c9-ceX"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1252.5" y="429.5"/>
-        </scene>
         <!--All Events View Controller-->
         <scene sceneID="HtF-xL-EzE">
             <objects>
@@ -249,8 +160,8 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TNp-Je-sAw">
                                 <rect key="frame" x="0.0" y="64" width="375" height="92"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Live" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTn-hk-dHU">
-                                        <rect key="frame" x="127" y="17" width="120" height="58"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Live" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTn-hk-dHU">
+                                        <rect key="frame" x="0.0" y="17" width="375" height="58"/>
                                         <fontDescription key="fontDescription" name="Consolas" family="Consolas" pointSize="50"/>
                                         <color key="textColor" red="0.1529411765" green="0.15686274510000001" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -261,7 +172,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ueM-tw-L0d"/>
+                    <navigationItem key="navigationItem" id="ueM-tw-L0d">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="Re2-Un-TY4">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="jZN-29-Env">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="myEventsTableView" destination="sBA-DS-KX6" id="hjM-Ec-A6K"/>
@@ -284,10 +202,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="stadium" translatesAutoresizingMaskIntoConstraints="NO" id="Rhw-wd-LS3">
-                                <rect key="frame" x="112" y="113" width="151" height="151"/>
+                                <rect key="frame" x="138" y="113" width="100" height="100"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eFB-gf-cHn">
+                                <rect key="frame" x="14" y="73" width="348" height="32"/>
+                                <fontDescription key="fontDescription" name="Consolas" family="Consolas" pointSize="23"/>
+                                <color key="textColor" red="0.99215686270000003" green="0.59215686270000001" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9IM-5u-6hb">
+                                <rect key="frame" x="111" y="559" width="152" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="New Show">
+                                    <color key="titleColor" red="0.99215686270000003" green="0.59215686270000001" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="iI4-k4-viY" kind="show" id="mgI-TU-bpW"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WfB-Uk-ueJ">
-                                <rect key="frame" x="13" y="296" width="348" height="105"/>
+                                <rect key="frame" x="13" y="235" width="348" height="105"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Events" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJb-Cn-UsV">
                                         <rect key="frame" x="8" y="13" width="111" height="79"/>
@@ -310,46 +244,20 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.65098039220000004" green="0.8862745098" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PId-Q3-7hk">
-                                <rect key="frame" x="13" y="434" width="348" height="105"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Listening History" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ase-4v-WtB">
-                                        <rect key="frame" x="8" y="11" width="114" height="86"/>
-                                        <fontDescription key="fontDescription" name="Consolas" family="Consolas" pointSize="22"/>
-                                        <color key="textColor" red="0.1529411765" green="0.15686274510000001" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Listened: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRc-4D-PNd">
-                                        <rect key="frame" x="130" y="24" width="202" height="21"/>
-                                        <fontDescription key="fontDescription" name="Consolas" family="Consolas" pointSize="17"/>
-                                        <color key="textColor" red="0.1529411765" green="0.15686274510000001" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total Time: 0 hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1GP-VS-UA8">
-                                        <rect key="frame" x="130" y="60" width="202" height="21"/>
-                                        <fontDescription key="fontDescription" name="Consolas" family="Consolas" pointSize="17"/>
-                                        <color key="textColor" red="0.1529411765" green="0.15686274510000001" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.40000000000000002" green="0.85098039219999999" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eFB-gf-cHn">
-                                <rect key="frame" x="14" y="73" width="348" height="32"/>
-                                <fontDescription key="fontDescription" name="Consolas" family="Consolas" pointSize="23"/>
-                                <color key="textColor" red="0.99215686270000003" green="0.59215686270000001" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9IM-5u-6hb">
-                                <rect key="frame" x="111" y="559" width="152" height="45"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="New Show">
-                                    <color key="titleColor" red="0.99215686270000003" green="0.59215686270000001" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="iI4-k4-viY" kind="show" id="mgI-TU-bpW"/>
-                                </connections>
-                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3xM-PZ-1VN">
+                                <rect key="frame" x="14" y="361" width="348" height="195"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="FZ0-co-Pxm">
+                                        <rect key="frame" x="0.0" y="28" width="348" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FZ0-co-Pxm" id="hks-4k-Pqb">
+                                            <rect key="frame" x="0.0" y="0.0" width="348" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.1529411765" green="0.15686274510000001" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -358,12 +266,9 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="blueBackground" destination="PId-Q3-7hk" id="lG5-3W-ias"/>
-                        <outlet property="listenedToCount" destination="mRc-4D-PNd" id="dCi-kq-RR8"/>
                         <outlet property="myEventCount" destination="aom-lF-T7J" id="b19-3L-dIz"/>
                         <outlet property="myListenerCount" destination="UTm-9C-LCq" id="h3X-9W-vst"/>
                         <outlet property="purpleBackground" destination="WfB-Uk-ueJ" id="o5q-Bh-rNF"/>
-                        <outlet property="timeListenedCount" destination="1GP-VS-UA8" id="CHq-7D-hQm"/>
                         <outlet property="usernameLabel" destination="eFB-gf-cHn" id="UZP-hz-xgb"/>
                     </connections>
                 </viewController>
@@ -487,31 +392,43 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tis-SK-V01">
-                                <rect key="frame" x="7" y="96" width="360" height="38"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" red="0.1529411765" green="0.15686274510000001" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IZl-ec-MRT">
                                 <rect key="frame" x="297" y="376" width="78" height="78"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CiI-Cs-XhJ">
-                                        <rect key="frame" x="0.0" y="13" width="78" height="45"/>
+                                        <rect key="frame" x="0.0" y="14" width="78" height="45"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <color key="textColor" red="0.97647058819999999" green="0.14901960780000001" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.40000000000000002" green="0.85098039219999999" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tis-SK-V01">
+                                <rect key="frame" x="7" y="96" width="360" height="38"/>
+                                <fontDescription key="fontDescription" name="Consolas" family="Consolas" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sc8-w1-ETj">
+                                <rect key="frame" x="0.0" y="422" width="375" height="225"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Description: This is a sample mp3 that is a placeholder for the live audio that will eventually come through this screen" translatesAutoresizingMaskIntoConstraints="NO" id="7uD-zz-Wwo">
+                                        <rect key="frame" x="24" y="7" width="326" height="185"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="descriptionTextView" destination="7uD-zz-Wwo" id="b2z-Kc-eMg"/>
                         <outlet property="listenersLabel" destination="CiI-Cs-XhJ" id="d0F-Cy-hML"/>
                         <outlet property="nameLabel" destination="tis-SK-V01" id="0Me-cV-ct7"/>
                         <outlet property="profilePictureView" destination="477-IB-2Sq" id="j8O-OU-58e"/>
@@ -522,26 +439,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gVN-M9-jsV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3775.5" y="-1298.5"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="CzM-T3-Rzv">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nmA-vs-smO" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mNJ-jQ-azJ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.1529411765" green="0.15686274510000001" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="wjy-uN-1Rd"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QIr-y9-VV0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="733.5" y="429.5"/>
         </scene>
         <!--Log In View Controller-->
         <scene sceneID="0bt-Tm-M7b">
@@ -599,7 +496,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6T9-Pr-3GF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="211.5" y="429.5"/>
+            <point key="canvasLocation" x="1523.5" y="-826.5"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="vfA-il-pb3">
@@ -677,7 +574,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6wu-ly-m0x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="211.5" y="1225.5"/>
+            <point key="canvasLocation" x="1523.5" y="-30.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ioa-N0-2L2">
@@ -688,7 +585,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8uu-hJ-HAb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.1529411765" green="0.15686274510000001" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

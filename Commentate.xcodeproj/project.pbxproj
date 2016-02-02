@@ -13,7 +13,6 @@
 		F1237A261C5EDEC9001DA5B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1237A241C5EDEC9001DA5B3 /* LaunchScreen.storyboard */; };
 		F1237A311C5EDEC9001DA5B3 /* CommentateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1237A301C5EDEC9001DA5B3 /* CommentateTests.swift */; };
 		F1237A3C1C5EDEC9001DA5B3 /* CommentateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1237A3B1C5EDEC9001DA5B3 /* CommentateUITests.swift */; };
-		F1237A4A1C5EDEED001DA5B3 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1237A491C5EDEED001DA5B3 /* MenuViewController.swift */; };
 		F1237A4C1C5EE303001DA5B3 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1237A4B1C5EE303001DA5B3 /* CreateEventViewController.swift */; };
 		F1237A4E1C5EE5A7001DA5B3 /* MyEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1237A4D1C5EE5A7001DA5B3 /* MyEventsViewController.swift */; };
 		F1237A501C5EE661001DA5B3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1237A4F1C5EE661001DA5B3 /* ProfileViewController.swift */; };
@@ -73,7 +72,6 @@
 		F1237A371C5EDEC9001DA5B3 /* CommentateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommentateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1237A3B1C5EDEC9001DA5B3 /* CommentateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentateUITests.swift; sourceTree = "<group>"; };
 		F1237A3D1C5EDEC9001DA5B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F1237A491C5EDEED001DA5B3 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = ../MenuViewController.swift; sourceTree = "<group>"; };
 		F1237A4B1C5EE303001DA5B3 /* CreateEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
 		F1237A4D1C5EE5A7001DA5B3 /* MyEventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyEventsViewController.swift; sourceTree = "<group>"; };
 		F1237A4F1C5EE661001DA5B3 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -221,7 +219,6 @@
 			children = (
 				F1E021AA1C607E8B00DD4AF5 /* Base View Controllers */,
 				F1237A7A1C5F2BB9001DA5B3 /* EventViewController.swift */,
-				F1237A491C5EDEED001DA5B3 /* MenuViewController.swift */,
 				F1237A741C5F14A0001DA5B3 /* LogInViewController.swift */,
 				F1237A781C5F14F6001DA5B3 /* SignUpViewController.swift */,
 				F1237A511C5EE66F001DA5B3 /* AllEventsViewController.swift */,
@@ -408,7 +405,6 @@
 				F1237A501C5EE661001DA5B3 /* ProfileViewController.swift in Sources */,
 				F1237A7B1C5F2BB9001DA5B3 /* EventViewController.swift in Sources */,
 				F1237A521C5EE66F001DA5B3 /* AllEventsViewController.swift in Sources */,
-				F1237A4A1C5EDEED001DA5B3 /* MenuViewController.swift in Sources */,
 				F1E021A91C607E8000DD4AF5 /* CommentateViewController.swift in Sources */,
 				F1237A751C5F14A0001DA5B3 /* LogInViewController.swift in Sources */,
 				F1237A4C1C5EE303001DA5B3 /* CreateEventViewController.swift in Sources */,

@@ -12,6 +12,7 @@ import AVFoundation
 
 class EventViewController: CommentateViewController {
     
+    @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var listenersLabel: UILabel!
     @IBOutlet weak var viewerCountView: UIView!
@@ -23,10 +24,12 @@ class EventViewController: CommentateViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.automaticallyAdjustsScrollViewInsets = false
+        
         // add one to the number of events the current user has viewed
-        let currentCount = PFUser.currentUser()!["eventsViewed"] as! NSNumber
-        PFUser.currentUser()!["eventsViewed"] = currentCount.integerValue + 1
-        PFUser.currentUser()!.saveInBackground()
+        //let currentCount = PFUser.currentUser()!["eventsViewed"] as! NSNumber
+        //PFUser.currentUser()!["eventsViewed"] = currentCount.integerValue + 1
+        //PFUser.currentUser()!.saveInBackground()
         
         // Add bar button to upper right to even out logo
         let rightButton = UIBarButtonItem(title: "        ", style: .Plain, target: self, action: "clicked:")
@@ -45,10 +48,11 @@ class EventViewController: CommentateViewController {
     
     override func viewDidAppear(animated: Bool) {
         self.nameLabel.text = self.event?["title"] as? String
+        //self.descriptionTextView.text = self.event?["description"] as? String
         let randomViewerCount = random() % 2000
         self.listenersLabel.text = "\(randomViewerCount)"
         
-        if let backgroundMusic = self.setupAudioPlayerWithFile("Node", type:"mp3") {
+        if let backgroundMusic = self.setupAudioPlayerWithFile("love story", type:"mp3") {
             self.backgroundMusic = backgroundMusic
         }
         self.backgroundMusic?.meteringEnabled = true
@@ -63,9 +67,7 @@ class EventViewController: CommentateViewController {
         self.backgroundMusic?.updateMeters()
         
         let decibels = self.backgroundMusic?.averagePowerForChannel(0)
-        
-        //self.waveFormView.updateWithLevel(pow(10, CGFloat(decibels! / Float(20.0))))
-        
+                
         var normalizedValue : Float
         if(decibels! < -60 || decibels! == 0) {
             normalizedValue = 0.0

@@ -20,6 +20,10 @@ class AllEventsViewController: CommentateViewController, UITableViewDelegate, UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Force logout for demo purposes only
+        PFUser.logOut()
+        
         self.title = "Listen"
         let myColor = UIColor(colorLiteralRed: 39.0/255.0, green: 40.0/255.0, blue: 34.0/255.0, alpha: 1.0)
         self.myEventsTableView.backgroundColor = myColor
@@ -34,6 +38,20 @@ class AllEventsViewController: CommentateViewController, UITableViewDelegate, UI
         self.myEventsTableView.addSubview(refreshControl)
         
         self.refresh(self)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        dispatch_async(dispatch_get_main_queue(), {
+            if(PFUser.currentUser() == nil) {
+                self.displayLogin()
+            }
+        })
+    }
+    
+    func displayLogin() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let loginViewController = storyboard.instantiateViewControllerWithIdentifier("LogInController")
+        self.presentViewController(loginViewController, animated: true, completion: nil)
     }
     
     func refresh(sender:AnyObject)
@@ -68,7 +86,6 @@ class AllEventsViewController: CommentateViewController, UITableViewDelegate, UI
     }
     
     /*
-
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if(section == 0) {
             return "Live!"
@@ -88,21 +105,6 @@ class AllEventsViewController: CommentateViewController, UITableViewDelegate, UI
             }
         }
         return 0
-    }
-    
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        /*
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let destinationViewController = storyboard.instantiateViewControllerWithIdentifier("EventViewController") as! EventViewController
-        
-        if(indexPath.section == 0) {
-            destinationViewController.event = liveEvents![indexPath.row]
-        } else {
-            destinationViewController.event = futureEvents![indexPath.row]
-        }
-        
-        self.presentViewController(destinationViewController, animated: true, completion: nil)
-        */
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
