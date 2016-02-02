@@ -16,6 +16,7 @@ class EventViewController: CommentateViewController {
     @IBOutlet weak var listenersLabel: UILabel!
     @IBOutlet weak var viewerCountView: UIView!
     @IBOutlet weak var profilePictureView: UIView!
+    @IBOutlet weak var waveFormView: SCSiriWaveformView!
     var event : PFObject?
     var backgroundMusic : AVAudioPlayer?
     
@@ -38,8 +39,8 @@ class EventViewController: CommentateViewController {
         self.profilePictureView.layer.masksToBounds = true
     }
     
-    func clicked(sender: AnyObject) {
-        print("clicked")
+    override func viewDidDisappear(animated: Bool) {
+        self.backgroundMusic?.stop()
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -47,11 +48,32 @@ class EventViewController: CommentateViewController {
         let randomViewerCount = random() % 2000
         self.listenersLabel.text = "\(randomViewerCount)"
         
-        if let backgroundMusic = self.setupAudioPlayerWithFile("love story", type:"mp3") {
+        if let backgroundMusic = self.setupAudioPlayerWithFile("Node", type:"mp3") {
             self.backgroundMusic = backgroundMusic
         }
+        self.backgroundMusic?.meteringEnabled = true
         backgroundMusic?.volume = 0.3
         backgroundMusic?.play()
+        
+        let displaylink : CADisplayLink = CADisplayLink(target: self, selector: "updateMeters:")
+        displaylink.addToRunLoop(NSRunLoop.currentRunLoop(), forMode: NSRunLoopCommonModes)
+    }
+    
+    func updateMeters(sender: AnyObject) {
+        self.backgroundMusic?.updateMeters()
+        
+        let decibels = self.backgroundMusic?.averagePowerForChannel(0)
+        
+        //self.waveFormView.updateWithLevel(pow(10, CGFloat(decibels! / Float(20.0))))
+        
+        var normalizedValue : Float
+        if(decibels! < -60 || decibels! == 0) {
+            normalizedValue = 0.0
+        } else {
+            normalizedValue = powf((powf(10.0, 0.05 * decibels!) - powf(10.0, 0.05 * -60.0)) * (1.0 / (1.0 - powf(10.0, 0.05 * -60.0))), 1.0 / 2.0);
+        }
+        self.waveFormView.updateWithLevel(CGFloat(normalizedValue))
+        
     }
     
     func setupAudioPlayerWithFile(file:NSString, type:NSString) -> AVAudioPlayer?  {

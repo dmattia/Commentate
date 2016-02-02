@@ -136,4 +136,10 @@ class AllEventsViewController: CommentateViewController, UITableViewDelegate, UI
         
         return cell
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        let destinationViewController = segue.destinationViewController as! EventViewController
+        destinationViewController.event = liveEvents![(self.myEventsTableView.indexPathForSelectedRow?.row)!]
+    }
 }
