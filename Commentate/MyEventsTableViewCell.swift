@@ -11,6 +11,5 @@ import UIKit
 class MyEventsTableViewCell: UITableViewCell {
     @IBOutlet weak var eventTitleLabel: UILabel!
     @IBOutlet weak var commentatorLabel: UILabel!
-    @IBOutlet weak var styleLabel: UILabel!
     @IBOutlet weak var viewersLabel: UILabel!
 }

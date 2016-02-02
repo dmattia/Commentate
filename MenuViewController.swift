@@ -10,7 +10,9 @@ import UIKit
 import Parse
 import ParseUI
 
-class MenuViewController: UIViewController, PFLogInViewControllerDelegate {
+class MenuViewController: CommentateViewController, PFLogInViewControllerDelegate {
+    let btnName = UIButton()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

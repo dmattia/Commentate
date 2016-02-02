@@ -62,7 +62,6 @@ class MyEventsViewController: UIViewController, UITableViewDataSource, UITableVi
         let event = self.myEvents![indexPath.row]
         
         cell.eventTitleLabel.text = event["title"] as? String
-        cell.styleLabel.text = event["style"] as? String
         let randViewers = random() % 2000
         cell.viewersLabel.text = "\(randViewers)"
         

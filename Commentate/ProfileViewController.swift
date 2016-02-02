@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: CommentateViewController {
     
     @IBOutlet weak var purpleBackground: UIView!
     @IBOutlet weak var blueBackground: UIView!

@@ -8,13 +8,15 @@
 
 import UIKit
 import Parse
+import Foundation
 
-class AllEventsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class AllEventsViewController: CommentateViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var myEventsTableView: UITableView!
     var liveEvents : [PFObject]?
     var futureEvents : [PFObject]?
     var refreshControl:UIRefreshControl!
+    let pictureOptions = ["soccer", "gloves", "basketball", "default"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,20 +58,25 @@ class AllEventsViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 90
+        return 130
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 2
+        // Hardcoded to 1 for now. Support is full for 2,
+        // but we are only demoing with 1 (live events, not future)
+        return 1
     }
     
+    /*
+
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if(section == 0) {
             return "Live!"
         }
         return "Future Events"
     }
-    
+    */    
+
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if(section == 0) {
             if let count = self.liveEvents?.count {
@@ -84,6 +91,7 @@ class AllEventsViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        /*
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let destinationViewController = storyboard.instantiateViewControllerWithIdentifier("EventViewController") as! EventViewController
         
@@ -94,6 +102,7 @@ class AllEventsViewController: UIViewController, UITableViewDelegate, UITableVie
         }
         
         self.presentViewController(destinationViewController, animated: true, completion: nil)
+        */
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -108,9 +117,8 @@ class AllEventsViewController: UIViewController, UITableViewDelegate, UITableVie
             event = self.futureEvents![indexPath.row]
         }
         cell.eventTitleLabel.text = event["title"] as? String
-        cell.styleLabel.text = event["style"] as? String
         let randViewers = random() % 2000
-        cell.viewersLabel.text = "\(randViewers)"
+        cell.viewersLabel.text = "\(randViewers) Viewers"
         
         // find the commentator Label
         let userId = event["speaker"] as? String
@@ -120,6 +128,11 @@ class AllEventsViewController: UIViewController, UITableViewDelegate, UITableVie
         } catch {
             cell.commentatorLabel.text = ""
         }
+        
+        // set random picture
+        let imageName = self.pictureOptions[Int(arc4random_uniform(UInt32(self.pictureOptions.count)))]
+        let image = UIImage(named: imageName)
+        cell.pictureView.image = image
         
         return cell
     }

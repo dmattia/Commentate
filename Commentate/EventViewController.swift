@@ -10,10 +10,12 @@ import UIKit
 import Parse
 import AVFoundation
 
-class EventViewController: UIViewController {
+class EventViewController: CommentateViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var listenersLabel: UILabel!
+    @IBOutlet weak var viewerCountView: UIView!
+    @IBOutlet weak var profilePictureView: UIView!
     var event : PFObject?
     var backgroundMusic : AVAudioPlayer?
     
@@ -24,22 +26,32 @@ class EventViewController: UIViewController {
         let currentCount = PFUser.currentUser()!["eventsViewed"] as! NSNumber
         PFUser.currentUser()!["eventsViewed"] = currentCount.integerValue + 1
         PFUser.currentUser()!.saveInBackground()
+        
+        // Add bar button to upper right to even out logo
+        let rightButton = UIBarButtonItem(title: "        ", style: .Plain, target: self, action: "clicked:")
+        self.navigationItem.rightBarButtonItem = rightButton
+        
+        // Round the corners of the profile picture and viewer count views
+        self.viewerCountView.layer.cornerRadius = self.viewerCountView.frame.size.width / 2
+        self.viewerCountView.layer.masksToBounds = true
+        self.profilePictureView.layer.cornerRadius = self.viewerCountView.frame.size.width / 2
+        self.profilePictureView.layer.masksToBounds = true
+    }
+    
+    func clicked(sender: AnyObject) {
+        print("clicked")
     }
     
     override func viewDidAppear(animated: Bool) {
         self.nameLabel.text = self.event?["title"] as? String
         let randomViewerCount = random() % 2000
-        self.listenersLabel.text = "\(randomViewerCount) Listeners"
+        self.listenersLabel.text = "\(randomViewerCount)"
         
         if let backgroundMusic = self.setupAudioPlayerWithFile("love story", type:"mp3") {
             self.backgroundMusic = backgroundMusic
         }
         backgroundMusic?.volume = 0.3
         backgroundMusic?.play()
-    }
-    
-    @IBAction func backPressed(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     func setupAudioPlayerWithFile(file:NSString, type:NSString) -> AVAudioPlayer?  {
