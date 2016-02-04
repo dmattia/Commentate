@@ -21,10 +21,6 @@ class AllEventsViewController: CommentateViewController, UITableViewDelegate, UI
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Force logout for demo purposes only
-        PFUser.logOut()
-        
-        self.title = "Listen"
         let myColor = UIColor(colorLiteralRed: 39.0/255.0, green: 40.0/255.0, blue: 34.0/255.0, alpha: 1.0)
         self.myEventsTableView.backgroundColor = myColor
         self.myEventsTableView.backgroundView?.backgroundColor = myColor
@@ -33,11 +29,18 @@ class AllEventsViewController: CommentateViewController, UITableViewDelegate, UI
         self.myEventsTableView.delegate = self
         
         self.refreshControl = UIRefreshControl()
-        self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        let attrStr = NSAttributedString(string: "Refreshing")
+        self.refreshControl.attributedTitle = attrStr
         self.refreshControl.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
+        self.refreshControl.tintColor = UIColor.whiteColor()
         self.myEventsTableView.addSubview(refreshControl)
         
         self.refresh(self)
+    }
+    
+    @IBAction func logoutClicked(sender: AnyObject) {
+        PFUser.logOut()
+        viewDidAppear(true)
     }
     
     override func viewDidAppear(animated: Bool) {
