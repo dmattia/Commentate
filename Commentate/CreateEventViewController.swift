@@ -13,9 +13,13 @@ class CreateEventViewController: CommentateViewController  {
     
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextView!
+    @IBOutlet weak var buttonView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.buttonView.layer.cornerRadius = self.buttonView.frame.width / 2
+        self.buttonView.layer.masksToBounds = true
     }
     
     @IBAction func cancelPushed(sender: AnyObject) {

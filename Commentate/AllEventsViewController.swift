@@ -57,7 +57,7 @@ class AllEventsViewController: CommentateViewController, UITableViewDelegate, UI
     func refresh(sender:AnyObject)
     {
         let query = PFQuery(className: "Event")
-        query.whereKey("startTime", lessThan: NSDate())
+        //query.whereKey("startTime", lessThan: NSDate()) Removing this will grab all events
         // would order by viewers if it were actually in the database
         // right now, viewers is a random number decided at runtime
         query.findObjectsInBackgroundWithBlock { (events: [PFObject]?, error: NSError?) -> Void in
