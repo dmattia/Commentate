@@ -16,7 +16,7 @@ class AllEventsViewController: CommentateViewController, UITableViewDelegate, UI
     var liveEvents : [PFObject]?
     var futureEvents : [PFObject]?
     var refreshControl:UIRefreshControl!
-    let pictureOptions = ["soccer", "gloves", "basketball", "default"]
+    let pictureOptions = ["DeVaughn", "soccer", "gloves", "basketball", "default"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,7 +50,7 @@ class AllEventsViewController: CommentateViewController, UITableViewDelegate, UI
             }
         })
     }
-    
+
     func displayLogin() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let loginViewController = storyboard.instantiateViewControllerWithIdentifier("LogInController")
@@ -135,7 +135,8 @@ class AllEventsViewController: CommentateViewController, UITableViewDelegate, UI
         }
         
         // set random picture
-        let imageName = self.pictureOptions[Int(arc4random_uniform(UInt32(self.pictureOptions.count)))]
+        //let imageName = self.pictureOptions[Int(arc4random_uniform(UInt32(self.pictureOptions.count)))]
+        let imageName = self.pictureOptions[indexPath.row]
         let image = UIImage(named: imageName)
         cell.pictureView.image = image
         

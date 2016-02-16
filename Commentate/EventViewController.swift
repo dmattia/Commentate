@@ -20,6 +20,7 @@ class EventViewController: CommentateViewController {
     @IBOutlet weak var waveFormView: SCSiriWaveformView!
     var event : PFObject?
     var backgroundMusic : AVAudioPlayer?
+    var displaylink : CADisplayLink?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,38 +44,48 @@ class EventViewController: CommentateViewController {
     }
     
     override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        print("View disappeared")
         self.backgroundMusic?.stop()
+        
+        self.displaylink?.removeFromRunLoop(NSRunLoop.currentRunLoop(), forMode: NSRunLoopCommonModes)
     }
     
     override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
         self.nameLabel.text = self.event?["title"] as? String
         //self.descriptionTextView.text = self.event?["description"] as? String
         let randomViewerCount = random() % 2000
         self.listenersLabel.text = "\(randomViewerCount)"
         
-        if let backgroundMusic = self.setupAudioPlayerWithFile("love story", type:"mp3") {
-            self.backgroundMusic = backgroundMusic
+        if let music = backgroundMusic {
+            print("\(music) already playing")
+        } else {
+            if let backgroundMusic = self.setupAudioPlayerWithFile("DBlast", type:"mp3") {
+                self.backgroundMusic = backgroundMusic
+                self.backgroundMusic?.meteringEnabled = true
+                self.backgroundMusic?.volume = 0.3
+            }
         }
-        self.backgroundMusic?.meteringEnabled = true
-        backgroundMusic?.volume = 0.3
         backgroundMusic?.play()
         
-        let displaylink : CADisplayLink = CADisplayLink(target: self, selector: "updateMeters:")
-        displaylink.addToRunLoop(NSRunLoop.currentRunLoop(), forMode: NSRunLoopCommonModes)
+        self.displaylink = CADisplayLink(target: self, selector: "updateMeters:")
+        displaylink!.addToRunLoop(NSRunLoop.currentRunLoop(), forMode: NSRunLoopCommonModes)
     }
     
     func updateMeters(sender: AnyObject) {
         self.backgroundMusic?.updateMeters()
         
-        let decibels = self.backgroundMusic?.averagePowerForChannel(0)
-                
-        var normalizedValue : Float
-        if(decibels! < -60 || decibels! == 0) {
-            normalizedValue = 0.0
-        } else {
-            normalizedValue = powf((powf(10.0, 0.05 * decibels!) - powf(10.0, 0.05 * -60.0)) * (1.0 / (1.0 - powf(10.0, 0.05 * -60.0))), 1.0 / 2.0);
+        if let decibels = self.backgroundMusic?.averagePowerForChannel(0) {
+            var normalizedValue : Float
+            if(decibels < -60 || decibels == 0) {
+                normalizedValue = 0.0
+            } else {
+                normalizedValue = powf((powf(10.0, 0.05 * decibels) - powf(10.0, 0.05 * -60.0)) * (1.0 / (1.0 - powf(10.0, 0.05 * -60.0))), 1.0 / 2.0);
+            }
+            self.waveFormView.updateWithLevel(CGFloat(normalizedValue))
         }
-        self.waveFormView.updateWithLevel(CGFloat(normalizedValue))
         
     }
     
