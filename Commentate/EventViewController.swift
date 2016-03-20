@@ -62,11 +62,9 @@ class EventViewController: CommentateViewController {
         if let music = backgroundMusic {
             print("\(music) already playing")
         } else {
-            if let backgroundMusic = self.setupAudioPlayerWithFile("DBlast", type:"mp3") {
-                self.backgroundMusic = backgroundMusic
-                self.backgroundMusic?.meteringEnabled = true
-                self.backgroundMusic?.volume = 0.3
-            }
+            self.backgroundMusic = self.setupAudioPlayerWithFile("DBlast", type: "mp3")
+            self.backgroundMusic?.meteringEnabled = true
+            self.backgroundMusic?.volume = 0.3
         }
         backgroundMusic?.play()
         

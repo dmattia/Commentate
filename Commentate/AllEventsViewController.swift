@@ -136,7 +136,7 @@ class AllEventsViewController: CommentateViewController, UITableViewDelegate, UI
         
         // set random picture
         //let imageName = self.pictureOptions[Int(arc4random_uniform(UInt32(self.pictureOptions.count)))]
-        let imageName = self.pictureOptions[indexPath.row]
+        let imageName = self.pictureOptions[indexPath.row % pictureOptions.count]
         let image = UIImage(named: imageName)
         cell.pictureView.image = image
         

@@ -18,8 +18,8 @@ class CreateEventViewController: CommentateViewController  {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.buttonView.layer.cornerRadius = self.buttonView.frame.width / 2
-        self.buttonView.layer.masksToBounds = true
+        //self.buttonView.layer.cornerRadius = self.buttonView.frame.width / 2
+        //self.buttonView.layer.masksToBounds = true
     }
     
     @IBAction func cancelPushed(sender: AnyObject) {
